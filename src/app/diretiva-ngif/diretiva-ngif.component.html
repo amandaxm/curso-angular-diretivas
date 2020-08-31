@@ -1,0 +1,39 @@
+<h5>
+*ngIf
+
+
+</h5>
+<div *ngIf="cursos.length > 0">
+    Lista de curso aqui
+</div>
+<!-- Nao existe else em diretiva
+o que acontece é que temos que negar a condição -->
+<div *ngIf="cursos.length == 0">
+    Não existem cursos para sere listados
+</div>
+
+<div *ngIf="mostrarCursos == true">
+    Lista de curso aqui
+</div>
+<!-- Nao existe else em diretiva
+o que acontece é que temos que negar a condição -->
+<div *ngIf="mostrarCursos == false">
+    Não existem cursos para sere listados
+</div>
+<br>
+<button (click)="onMostrarCursos()">
+    Mostrar ou esconder cursos
+</button>
+
+<h5>
+   
+Hidden como alternativa
+
+<div [hidden]="mostrarCursos">
+    Não existem cursos para sere listados
+</div>
+
+<div [hidden]="!mostrarCursos">
+    Lista de curso aqui
+</div>
+</h5>
