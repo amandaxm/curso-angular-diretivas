@@ -2,19 +2,16 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link"[class.active]="aba=='home'"
-        (click)="aba='home'">Home></a>
+        <a class="nav-link" [class.active]="aba=='home'" (click)="aba='home'">Home></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"[class.active]="aba=='mapa'"
-        (click)="aba='mapa'">Mapa</a>
+        <a class="nav-link" [class.active]="aba=='mapa'" (click)="aba='mapa'">Mapa</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"[class.active]="aba=='lista'"
-        (click)="aba='lista'">Lista</a>
+        <a class="nav-link" [class.active]="aba=='lista'" (click)="aba='lista'">Lista</a>
       </li>
     </ul>
-   
+
   </div>
 </nav>
 <!-- property bindind [] pois vamos ficar escutando o valor da experssao -->
@@ -24,5 +21,22 @@
   <p *ngSwitchDefault>Modo home ativado</p>
 
 
+
+</div>
+
+
+<h5>Removendo o * e usando template</h5>
+<div class="container" [ngSwitch]="aba">
+  <ng-template [ngSwitchCase]="'mapa'" >
+    <p>Modo mapa ativado</p>
+  </ng-template>
+
+  <ng-template [ngSwitchCase]="'lista'">
+    <p>Modo lista ativado</p>
+  </ng-template>
+
+  <ng-template [ngSwitchCase]="'home'"ngSwitchDefault >
+    <p>Modo home ativado</p>
+  </ng-template>
 
 </div>
