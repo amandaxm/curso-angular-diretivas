@@ -8,6 +8,7 @@ import { DiretivaNgforComponent } from './diretiva-ngfor/diretiva-ngfor.componen
 import { DiretivaNgclassComponent } from './diretiva-ngclass/diretiva-ngclass.component';
 import { DiretivaNgstyleComponent } from './diretiva-ngstyle/diretiva-ngstyle.component';
 import { OperadorElvisComponent } from './operador-elvis/operador-elvis.component';
+import { ExemplloNgContentComponent } from './exempllo-ng-content/exempllo-ng-content.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { OperadorElvisComponent } from './operador-elvis/operador-elvis.componen
     DiretivaNgclassComponent,
     DiretivaNgstyleComponent,
     OperadorElvisComponent,
+    ExemplloNgContentComponent,
   ],
   imports: [
     BrowserModule,
